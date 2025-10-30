@@ -14,4 +14,11 @@ public class LineItem {
     public double getTotal() {
         return total;
     }
+
+    @Override
+    public String toString() {
+        return "item=" + item +
+                ", amount=" + amount +
+                ", total=" + total + "\n";
+    }
 }
