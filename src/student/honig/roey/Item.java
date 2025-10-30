@@ -8,4 +8,8 @@ public class Item {
         this.name = name;
         this.value = value;
     }
+
+    public double getValue() {
+        return value;
+    }
 }
