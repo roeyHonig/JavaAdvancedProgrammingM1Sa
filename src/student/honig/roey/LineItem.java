@@ -17,8 +17,6 @@ public class LineItem {
 
     @Override
     public String toString() {
-        return "item=" + item +
-                ", amount=" + amount +
-                ", total=" + total + "\n";
+        return item.getName() + " X " + amount + ", total: " + total + "\n";
     }
 }

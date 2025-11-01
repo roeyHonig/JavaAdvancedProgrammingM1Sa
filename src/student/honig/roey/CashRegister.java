@@ -13,10 +13,10 @@ public class CashRegister {
         this.sum = sum;
     }
 
-    public void addItem(Item item, int amount) {
+    public void addItem(String name, double value, int amount) {
+        Item item = new Item(name, value);
         LineItem newItem = new LineItem(item, amount);
         account.add(newItem);
-
         return;
     }
 
@@ -24,9 +24,9 @@ public class CashRegister {
     public String toString() {
         String output = "";
         for (int i = 0; i < account.size(); i++) {
-            output += account.toString();
+            output += account.get(i).toString();
         }
-        return output;
+        return output.isEmpty() ? "Your cart is empty" : output;
     }
 
     public double accountTotal() {
@@ -40,9 +40,13 @@ public class CashRegister {
 
     public double bill(double payment) {
         double change = payment-this.accountTotal();
-        account = new ArrayList<>();
-        sum += payment;
-        sum -= change;
+        if (change >= 0) {
+            account = new ArrayList<>();
+            sum += payment;
+            sum -= change;
+        } else {
+            return change;
+        }
         return change;
     }
 

@@ -12,4 +12,8 @@ public class Item {
     public double getValue() {
         return value;
     }
+
+    public String getName() {
+        return name;
+    }
 }
