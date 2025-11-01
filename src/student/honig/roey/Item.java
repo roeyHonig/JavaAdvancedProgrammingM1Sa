@@ -1,5 +1,5 @@
 package student.honig.roey;
-// TODO: add some documentation
+
 public class Item {
     private String name;
     private double value;

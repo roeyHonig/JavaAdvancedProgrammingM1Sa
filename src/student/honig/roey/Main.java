@@ -1,5 +1,4 @@
 package student.honig.roey;
-
 import java.util.Scanner;
 
 public class Main {
@@ -41,7 +40,6 @@ public class Main {
                     running = false;
                     break;
             }
-
             System.out.println();
         }
 

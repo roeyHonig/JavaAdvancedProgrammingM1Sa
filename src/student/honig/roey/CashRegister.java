@@ -1,5 +1,4 @@
 package student.honig.roey;
-
 import java.util.ArrayList;
 
 public class CashRegister {
